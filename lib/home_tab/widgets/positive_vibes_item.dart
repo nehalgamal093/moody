@@ -56,7 +56,7 @@ class PositiveVibesItem extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .titleSmall!
-                          .copyWith(fontWeight: FontWeight.w500),
+                          .copyWith(fontWeight: FontWeight.w600),
                     ),
                   ],
                 )
