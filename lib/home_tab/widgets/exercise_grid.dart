@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:moody/home_tab/widgets/grid_item.dart';
 import '../../model/exercise_model.dart';
 
-
 class ExerciseGrid extends StatelessWidget {
   const ExerciseGrid({super.key});
 
@@ -19,10 +18,8 @@ class ExerciseGrid extends StatelessWidget {
               crossAxisSpacing: 24,
               mainAxisExtent: 70),
           itemBuilder: (context, index) {
-            return  GridItem(
-             title: ExerciseModel.exerciseModel(index).title,
-              image: ExerciseModel.exerciseModel(index).image,
-              color: ExerciseModel.exerciseModel(index).color,
+            return GridItem(
+              exerciseModel: ExerciseModel.exerciseModel(index),
             );
           }),
     );

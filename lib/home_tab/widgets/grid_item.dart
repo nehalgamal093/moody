@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
+import '../../model/exercise_model.dart';
+
 class GridItem extends StatelessWidget {
-  final String image;
-  final Color color;
-  final String title;
+  final ExerciseModel exerciseModel;
   const GridItem(
       {super.key,
-      required this.image,
-      required this.color,
-      required this.title});
+      required this.exerciseModel});
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +16,15 @@ class GridItem extends StatelessWidget {
           borderRadius: const BorderRadius.all(
             Radius.circular(8),
           ),
-          color: color),
+          color: exerciseModel.color),
       child: Row(
         children: [
-          Image.asset(image),
+          Image.asset(exerciseModel.image),
           const SizedBox(
             width: 12,
           ),
           Text(
-            title,
+            exerciseModel.title,
             style: Theme.of(context)
                 .textTheme
                 .titleSmall!
